@@ -1,0 +1,26 @@
+*{
+    font-family: Arial, Helvetica, serif;
+    font-size: 11px;
+    color: grey;
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+#sub-header{
+
+}
+.image img{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    width: 30%;
+    height: 40%;
+    transition: 1s;
+}
+.image img:hover{
+    position: absolute;
+    border: solid;
+    border-radius: 50%;
+    transition: 1s;
+}
