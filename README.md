@@ -1,4 +1,4 @@
-# Programming Gold Term1 Website
+Programming Gold Term1 Website
 Website for term1 summative and formative
 
 ## References
@@ -14,4 +14,4 @@ Building Better Mental Health (no date) HelpGuide.org. Available at: https://www
 
 ### Text
 
-Symmons, S. (2019) Why do tech workers suffer more from mental health issues?, CPS Group UK. Available at: https://www.cpsgroupuk.com/blog/why-do-tech-workers-suffer-more-from-mental-health-issues (Accessed: October 28, 2022). 
+Symmons, S. (2019) Why do tech workers suffer more from mental health issues?, CPS Group UK. Available at: https://www.cpsgroupuk.com/blog/why-do-tech-workers-suffer-more-from-mental-health-issues (Accessed: October 28, 2022).  
