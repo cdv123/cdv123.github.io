@@ -1,28 +1,33 @@
 *{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 16px;
     color: grey;
 }
-h1{
-    font-size: 30px;
+#home{
+    position: relative;
+    bottom: 3%;
+    font-size: 40px;
     text-align: center;
 }
-p{
-    margin-left: 100px;
-}
-.image img{
+body{
     position: relative;
-    
+}
+
+.image img{
+    position: absolute;
     width: 30%;
-    height: 40%;
+    height: 35%;
+    left: 60%;
+    top: 25%;
     margin-right: 50px;
-    float: right;
 }
 #sub-header{
     text-align: center;
     font-style: italic;
     font-weight: bold;
     margin-bottom: 15px;
+    position: relative;
+
     
 }
 h2{
@@ -32,10 +37,12 @@ h2{
     color: rgb(23, 79, 93);
 }
 #problem-text{
-    width: 30%;
+    margin-top: 2%;
+    width: 50%;
     top: 40%;
     left: 5%;
-
+    margin-left: 60px;
+    margin-bottom: 15%;
 }
 #problem{
     top: 30%;
@@ -49,21 +56,27 @@ h2{
 button{
     padding: 1% 2%;
     color: black;
-    border-color: aquamarine;
+    border-color: black;
     background-color: aquamarine;
-    transition: 1s;
+    transition: 0.5s;
     opacity: 1;
 }
 button:hover{
     opacity: 0.8;
-    transition: 1s;
-    border-color: black;
+    transition: 0.5s;
+    border-color: aquamarine;
+    background-color: black;
+    color: aquamarine;
 }
 
 #mental-health-button{
-    top: 80%;
-    left: 42%;
+    margin-left: 5%;
+    position: absolute;
+    top: 62%;
+    left: 56%;
 }
 .bold{
     font-weight: bold;
+}
+#why{
 }
