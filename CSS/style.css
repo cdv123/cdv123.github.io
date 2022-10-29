@@ -4,6 +4,9 @@
     color: grey;
     margin: 0;
 }
+body{
+    position: relative;
+}
 p{
     margin-top: 5%;
     margin-left: 60px;
@@ -64,16 +67,16 @@ button:hover{
 .image1 img{
     position: absolute;
     width: 30%;
-    height: 45%;
+    height: 20%;
     left: 60%;
-    top: 35%;
+    top: 15%;
     margin-right: 5%;
 }
 #mental-health-button{
     margin-left: 5%;
     margin-right: 5%;
     position: absolute;
-    top: 82%;
+    top: 37%;
     left: 56%;
 }
 .modal-window {
