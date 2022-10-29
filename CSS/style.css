@@ -2,33 +2,26 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
     color: grey;
+    margin: 0;
+}
+p{
+    margin-top: 5%;
+    margin-left: 60px;
 }
 #home{
     position: relative;
     bottom: 3%;
     font-size: 40px;
     text-align: center;
-}
-body{
-    position: relative;
+    color: black;
 }
 
-.image img{
-    position: absolute;
-    width: 30%;
-    height: 35%;
-    left: 60%;
-    top: 25%;
-    margin-right: 50px;
-}
 #sub-header{
     text-align: center;
     font-style: italic;
     font-weight: bold;
-    margin-bottom: 15px;
     position: relative;
-
-    
+    right: 2.5%;   
 }
 h2{
     font-size: 20px;
@@ -42,17 +35,17 @@ h2{
     top: 40%;
     left: 5%;
     margin-left: 60px;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 #problem{
     top: 30%;
     left: 5%;
-    
 }
 .italic {
     font-style: italic;
     font-weight: bold;
 }
+
 button{
     padding: 1% 2%;
     color: black;
@@ -68,13 +61,92 @@ button:hover{
     background-color: black;
     color: aquamarine;
 }
-
+.image1 img{
+    position: absolute;
+    width: 30%;
+    height: 45%;
+    left: 60%;
+    top: 35%;
+    margin-right: 5%;
+}
 #mental-health-button{
     margin-left: 5%;
+    margin-right: 5%;
     position: absolute;
-    top: 62%;
+    top: 82%;
     left: 56%;
 }
+.modal-window {
+    position: fixed;
+    background-color: rgba(200, 200, 200, 0.75);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .modal-window:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .modal-window > div {
+    width: 70%;
+    height: 70%;
+    position: relative;
+    margin: 7.5% auto;
+    padding: 2rem;
+    background: #fff;
+    color: #444;
+  }
+  
+  .modal-window header {
+    font-weight: bold;
+  }
+
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+  }
+  
+  .modal-close:hover {
+    color: #000;
+  }
+  
+  .modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+  }
+
 .bold{
     font-weight: bold;
+}
+
+#why-text{
+    margin-top: 6%;
+    width: 50%;
+    float: right;
+    margin-right: 10%;
+    margin-bottom: 12%;
+}
+.image2 img{
+    float: left;
+    margin-top: 3%;
+    margin-left: 6%;
+    margin-bottom: 7%;
+    width: 30%;
+    height: 35%;
 }
