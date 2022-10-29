@@ -11,7 +11,7 @@
     </head>
     <body>
         <!--Copied from bootstrap, see README for details-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -19,25 +19,37 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+                  <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"> </a>
+                  <a class="nav-link" href="#"> Culture of tech industry and mental health</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="#">Analysis of data</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
+                  <a class="nav-link" href="#">About</a>
                 </li>
               </ul>
             </div>
           </nav>
-        <h1>Mental Health in Tech</h1>
-        <p id = "sub-header"> This website will analyse the state of mental health for people working in the tech industry</p>
+        <h1 id = "home">Mental Health in Tech</h1>
+        <p id = "sub-header"> An analysis on the state of mental health for people working in the tech industry</p>
+        <h2 id = "problem"> The scale of the problem </h2>
+        <!--Copied from https://www.cpsgroupuk.com/blog/why-do-tech-workers-suffer-more-from-mental-health-issues see readme for more details-->
+        <p id = "problem-text">
+            The <span class = "italic">British Interactive Media Association</span> (BIMA) recently revealed that tech workers are five times more likely to suffer from a mental health problem, compared to the wider population. Between four and 10 per cent of UK adults are thought to experience depression at some point in their lives but this figure pales in comparison to the tech sector, where as many as <span class = "bold">52 per cent </span>of the workforce admitted to suffering with stress, anxiety and depression at work. 
+        </p>
+        <!--Image obtained from https://www.helpguide.org/articles/mental-health/building-better-mental-health.htm see readme for more details-->
         <div class ="image">
-            <img src="Images\illustration-gears-in-head-768.jpg" alt="mental health" class = "generic-image">
+            <img src="Images\illustration-gears-in-head-768.jpg" alt="mental health">
         </div>
+        <a href="https://www.youtube.com/watch?v=NHulgcO_16U" target="_blank">
+            <button class = "additional-info" id ="mental-health-button"> Click to watch video detailing the problem here </button>
+        </a>
+        <h2 id = "why"> Impact of the culture of tech industry</h2>
+        <h2 id = "Support"> Support from companies</h2>
+        <h2 id = "About"> About</h2>
         <p></p>
     </body>
 </html>

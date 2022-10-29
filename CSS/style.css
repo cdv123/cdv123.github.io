@@ -1,26 +1,69 @@
 *{
-    font-family: Arial, Helvetica, serif;
-    font-size: 11px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
     color: grey;
 }
 h1{
     font-size: 30px;
     text-align: center;
 }
-#sub-header{
-
+p{
+    margin-left: 100px;
 }
 .image img{
-    position: absolute;
-    left: 50%;
-    top: 15%;
+    position: relative;
+    
     width: 30%;
     height: 40%;
-    transition: 1s;
+    margin-right: 50px;
+    float: right;
 }
-.image img:hover{
-    position: absolute;
-    border: solid;
-    border-radius: 50%;
+#sub-header{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 15px;
+    
+}
+h2{
+    font-size: 20px;
+    top: 200%;
+    margin-left: 5%;
+    color: rgb(23, 79, 93);
+}
+#problem-text{
+    width: 30%;
+    top: 40%;
+    left: 5%;
+
+}
+#problem{
+    top: 30%;
+    left: 5%;
+    
+}
+.italic {
+    font-style: italic;
+    font-weight: bold;
+}
+button{
+    padding: 1% 2%;
+    color: black;
+    border-color: aquamarine;
+    background-color: aquamarine;
     transition: 1s;
+    opacity: 1;
+}
+button:hover{
+    opacity: 0.8;
+    transition: 1s;
+    border-color: black;
+}
+
+#mental-health-button{
+    top: 80%;
+    left: 42%;
+}
+.bold{
+    font-weight: bold;
 }
