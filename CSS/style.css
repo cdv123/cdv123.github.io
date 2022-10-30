@@ -13,8 +13,10 @@ p{
     margin-top: 5%;
     margin-left: 60px;
 }
+
 #home{
     position: relative;
+    margin-top: 5%;
     bottom: 3%;
     font-size: 40px;
     text-align: center;
@@ -108,7 +110,7 @@ button:hover{
     width: 70%;
     height: 70%;
     position: relative;
-    margin: 7.5% auto;
+    margin: 10% auto;
     padding: 2rem;
     background: #fff;
     color: #444;
@@ -160,6 +162,10 @@ button:hover{
 }
 @media only screen and (max-width:768px){
 
+    #home{
+        margin-top: 20%;
+        font-size: 20px;
+    }
     #problem{
         float: none;
     }
@@ -215,8 +221,5 @@ button:hover{
       }
     iframe{
         height: 70%;
-    }
-    .navbar{
-        
     }
 }
