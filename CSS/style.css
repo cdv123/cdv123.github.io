@@ -232,6 +232,6 @@ button:hover{
     .list-group{
         width: 90%;
         margin-left: 5%;
-        font-size: x-small;
+        word-wrap: break-word;
     }
 }
