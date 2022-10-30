@@ -172,5 +172,32 @@ button:hover{
         width: 50%;
         margin: 0;
         height: auto;
+        margin-left: 20%;
     }
+    #mental-health-button{
+        padding: 2% 5%;
+        height: auto;
+    }
+    #button-container{
+        float: right;
+        margin-top: 2%;
+        margin-right:8.5%;
+        width: 100%;
+        clear: right;
+    }
+    .image2{
+        float:none;
+        width: 50%;
+        margin: 0;
+        height: auto;
+        margin-left: 20%;
+    }
+    #why-text{
+        margin: 0;
+        width: 100%;
+    }
+    .place-holder{
+        width: 100%;
+    }
+
 }
