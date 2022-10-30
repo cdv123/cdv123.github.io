@@ -160,12 +160,11 @@ button:hover{
     height: auto;
 }
 @media only screen and (max-width:768px){
-    #home{
-        font-size: 16px;
-    }
+
     #problem-text{
+        float: none;
         margin: 0;
-        width: 100%;
+        width: 90%;
     }
     .image1{
         float:none;
@@ -179,10 +178,9 @@ button:hover{
         height: auto;
     }
     #button-container{
-        float: right;
         margin-top: 2%;
-        margin-right:8.5%;
-        width: 100%;
+        margin-left:8.5%;
+        width: 80%;
         clear: right;
     }
     .image2{
@@ -194,10 +192,12 @@ button:hover{
     }
     #why-text{
         margin: 0;
-        width: 100%;
+        width: 90%;
     }
     .place-holder{
-        width: 100%;
+        width: 90%;
+        margin: 0;
+        margin-left: 5%;
     }
 
 }
