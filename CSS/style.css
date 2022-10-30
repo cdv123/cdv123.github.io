@@ -166,6 +166,11 @@ button:hover{
     #problem-text{
         margin: 0;
         width: 100%;
-
+    }
+    .image1{
+        float:none;
+        width: 50%;
+        margin: 0;
+        height: auto;
     }
 }
