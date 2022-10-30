@@ -191,8 +191,13 @@ button:hover{
         margin-left: 20%;
     }
     #why-text{
+        float: none;
         margin: 0;
         width: 90%;
+        margin-top: 5%;
+    }
+    h2{
+        margin-top: 5%;
     }
     .place-holder{
         width: 90%;
