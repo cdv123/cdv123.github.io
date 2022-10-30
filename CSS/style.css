@@ -1,8 +1,10 @@
+
 *{
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
     color: grey;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
     position: relative;
@@ -64,20 +66,24 @@ button:hover{
     background-color: black;
     color: aquamarine;
 }
-.image1 img{
-    position: absolute;
+.image1{
+    float: right;
     width: 30%;
-    height: 20%;
-    left: 60%;
-    top: 15%;
-    margin-right: 5%;
+    margin-top: 5%;
+    margin-right: 10%;
+    clear: left;
+    height: auto;
 }
 #mental-health-button{
-    margin-left: 5%;
-    margin-right: 5%;
-    position: absolute;
-    top: 37%;
-    left: 56%;
+    padding: 2% 5%;
+    height: auto;
+}
+#button-container{
+    float: right;
+    margin-top: 2%;
+    margin-right:8.5%;
+    width: 30%;
+    clear: right;
 }
 .modal-window {
     position: fixed;
@@ -145,11 +151,21 @@ button:hover{
     margin-right: 10%;
     margin-bottom: 12%;
 }
-.image2 img{
+.image2{
     float: left;
     margin-top: 3%;
     margin-left: 6%;
     margin-bottom: 7%;
     width: 30%;
-    height: 35%;
+    height: auto;
+}
+@media only screen and (max-width:768px){
+    #home{
+        font-size: 16px;
+    }
+    #problem-text{
+        margin: 0;
+        width: 100%;
+
+    }
 }

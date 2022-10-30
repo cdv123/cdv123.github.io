@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="CSS/style.css">
         <meta charset="utf-8">
-        <meta name = "viewport" content="width=device-width, initial-scale=1">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <!--Link to bootstrap see README for details-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -24,7 +24,7 @@
                   <a class="nav-link" href="#why"> Culture of tech industry and mental health</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#Analysis">Analysis of data</a>
+                  <a class="nav-link" href="#analysis-data">Analysis of data</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#About">About</a>
@@ -34,19 +34,22 @@
           </nav>
         <h1 id = "home">Mental Health in Tech</h1>
         <p id = "sub-header"> An analysis on the state of mental health for people working in the tech industry</p>
+        
+        <!--Image obtained from https://www.helpguide.org/articles/mental-health/building-better-mental-health.htm see README for more details-->
+          <img class = "image1" src="Images\illustration-gears-in-head-768.jpg" alt="mental health picture">
+        
         <h2 id = "problem"> The scale of the problem </h2>
+        <a href="#open-modal" id = "button-container">
+          <button class = "additional-info" id ="mental-health-button"> Click here to watch video detailing the problem </button>
+        </a>
         <!--Copied from https://www.cpsgroupuk.com/blog/why-do-tech-workers-suffer-more-from-mental-health-issues see README for more details-->
         <ul id = "problem-text">
             <li> The <span class = "italic">British Interactive Media Association</span> (BIMA) recently revealed that tech workers are five times more likely to suffer from a mental health problem, compared to the wider population. Between four and 10 per cent of UK adults are thought to experience depression at some point in their lives but this figure pales in comparison to the tech sector, where as many as <span class = "bold">52 per cent </span>of the workforce admitted to suffering with stress, anxiety and depression at work. </li>
             <li>Two thirds of those surveyed stated that their work has caused high levels of stress, with 13 per cent of these workers experiencing this emotional strain on a constant basis. This work-based stress is also causing severe prolonged headaches, sleep deprivation and anxiety attacks. Stress is also more commonly experienced by women in tech, with BIMA finding that men were just nine per cent as likely to experience high levels of workplace stress.</li>
         </ul>
-        <!--Image obtained from https://www.helpguide.org/articles/mental-health/building-better-mental-health.htm see README for more details-->
-        <div class ="image1">
-            <img src="Images\illustration-gears-in-head-768.jpg" alt="mental health picture">
-        </div>
-        <a href="#open-modal">
-            <button class = "additional-info" id ="mental-health-button"> Click here to watch video detailing the problem </button>
-        </a>
+        
+        
+        
         <!-- Code copied from https://www.labnol.org/code/20083-modal-popup-css with some changes see README for more details-->
         <div id="open-modal" class="modal-window">
             <div>
@@ -59,16 +62,14 @@
         </div>
         <h2 id = "why"> Culture of tech industry and mental health</h2>
         <!--Image from https://www.infoq.com/articles/mental-health-tech-workplace/-->
-        <div class ="image2">
-            <img src="Images\mental-health-tech-workplace-1556808890382.jpg" alt="mental health picture">
-        </div>
+        <img class = "image2" src="Images\mental-health-tech-workplace-1556808890382.jpg" alt="mental health picture">
         <!--Copied from https://101datasolutions.co.uk/tech-workers-are-5x-more-likely-to-be-depressed-its-time-to-make-mental-health-a-priority-in-our-industry/#:~:text=Mental%20illness%20is%20a%20common,depressed%20than%20the%20UK%20average. see readme for more details-->
         <ul id ="why-text">
             <li>Employees may feel isolated and burdened by difficult projects or exhausted if they believe they have no control over their work. In addition, relentless and continuous change, common in tech, may significantly impact mental health. Long hours may also contribute to higher rates of absenteeism and more mistakes on the job. Employees may feel stressed by their workload, have inadequate training, or strive for unrealistic goals.</li>
             <li>Mental health should be considered as critical as physical health by technology firms, as a healthy work environment results in higher productivity and job satisfaction. </li>
         </ul>
 
-        <h2 id = "Analysis"> Analysis of data</h2>
+        <h2 id = "analysis-data"> Analysis of data</h2>
         <p>
             This section will contain my analysis of the dataset from https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey which is a 2014 survey on attitudes towards and frequency of mental health issues in the tech industry
         </p>
