@@ -161,6 +161,10 @@ button:hover{
 }
 @media only screen and (max-width:768px){
 
+    #problem{
+        float: none;
+    }
+
     #problem-text{
         float: none;
         margin: 0;
