@@ -236,3 +236,7 @@ button:hover{
         word-wrap: break-word;
     }
 }
+.nav-item:hover{
+    border: solid;
+    border-color: black;
+}
