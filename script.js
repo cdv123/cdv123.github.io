@@ -1,28 +1,11 @@
-const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-  ];
+// from https://joshtronic.com/2022/05/15/how-to-convert-csv-to-json-in-javascript/ accessed 5 Nov 2022
 
-  const data = {
-    labels: labels,
-    datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
-    }]
-  };
+const fs = require('fs');
+const Papa = require('papaparse');
 
-  const config = {
-    type: 'line',
-    data: data,
-    options: {}
-  };
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  ); 
+const file = 'Dataset/shortSurvey.csv';
+const csvData = fs.readFileSync(file, 'utf8');
+
+const jsonData = Papa.parse(csvData, { header: true });
+
+console.log(jsonData)
