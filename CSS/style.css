@@ -2,13 +2,41 @@
 *{
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
-    color: rgb(67, 67, 67);
     margin: 0;
     box-sizing: border-box;
 }
+
 body{
     position: relative;
-    background-color:#FFFDD1 !important;
+}
+#dark-mode-button{
+    position: fixed;
+    top: 11%;
+    left: 1%;
+    width: max-content;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    font-size: 10px;
+    z-index: 1000;
+}
+.fade-left{
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(10%);
+}
+.fade-right{
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(-10%);
+}
+.animate{
+    opacity: 1;
+    transform: translateX(0);
+}
+#section1{
+    margin-top: 20%;
+    margin-bottom: 30%;
+
 }
 p{
     margin-top: 5%;
@@ -19,9 +47,10 @@ p{
     position: relative;
     margin-top: 5%;
     bottom: 3%;
-    font-size: 40px;
+    font-size: 3px;
     text-align: center;
-    color: black;
+    font-weight: bold;
+    transition:all 1s;
 }
 
 #sub-header{
@@ -32,6 +61,7 @@ p{
     right: 2.5%;   
 }
 h2{
+    margin-top: 50%;
     font-size: 20px;
     margin-left: 5%;
     color: rgb(23, 79, 93);
@@ -53,20 +83,15 @@ h2{
     font-weight: bold;
 }
 
-button{
-    padding: 1% 2%;
-    color: black;
-    border-color: black;
-    background-color: aquamarine;
+.b1{
+    border-radius: 20px;
     transition: 0.5s;
     opacity: 1;
 }
-button:hover{
+
+.b1:hover{
     opacity: 0.8;
     transition: 0.5s;
-    border-color: aquamarine;
-    background-color: black;
-    color: aquamarine;
 }
 .image1{
     float: right;
@@ -78,14 +103,13 @@ button:hover{
 }
 #mental-health-button{
     padding: 2% 5%;
-    height: auto;
 }
 #button-container{
     float: right;
     margin-top: 2%;
-    margin-right:8.5%;
-    width: 30%;
+    margin-right:10%;
     clear: right;
+    width: 30%;
 }
 .modal-window {
     position: fixed;
@@ -168,11 +192,10 @@ button:hover{
     color: white;
     margin-bottom: 10%;
 }
-@media only screen and (max-width:768px){
-
+@media only screen and (max-width:1000px){
     #home{
-        margin-top: 20%;
-        font-size: 20px;
+        margin-top: 15%;
+        font-size: 2em;
     }
     #problem{
         float: none;
@@ -192,15 +215,21 @@ button:hover{
         height: auto;
         margin-left: 15%;
     }
-    #mental-health-button{
-        padding: 2% 5%;
-        height: auto;
+    #dark-mode-button{
+        position: fixed;
+        font-size: 10px;
+        margin-left: 0%;
+
     }
     #button-container{
-        margin-top: 2%;
-        margin-left:8.5%;
         width: 80%;
-        clear: right;
+        margin-left: 5%;
+        margin-right: 5%;
+        
+    }
+    .additional-info{
+        padding: 2% 5%;
+        text-align: center;
     }
     .image2{
         float:none;
@@ -236,7 +265,7 @@ button:hover{
         word-wrap: break-word;
     }
 }
-.nav-item:hover{
+/* .nav-item:hover{
     border: solid;
     border-color: black;
-}
+} */
