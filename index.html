@@ -6,7 +6,9 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <meta charset="utf-8">
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-        <!--Bootstrap(2022)see README for details-->
+        <!-- d3 library-->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <!--Bootstrap(2022) see README for details-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -79,14 +81,51 @@
         </ul>
 
         <h2 id = "analysis-data"> Analysis of data</h2>
-        <div>
-          <canvas id = "myChart"></canvas>
-          
-        </div>
-        
+
+        <!-- <svg id = "bar-chart">
+          <rect x= "0" y ="0"/>
+        </svg> -->
+        <svg>
+          <rect width = "50"
+          style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
+          <rect width = "50"
+          style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
+          <rect width = "50"
+          style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
+        </svg>
         <p class = "place-holder">
             This section will contain my analysis of the dataset from https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey which is a 2014 survey on attitudes towards and frequency of mental health issues in the tech industry
         </p>
+
+        <label for="adj">Add adjective:</label>
+        <textarea id="adj" name="adj"
+          rows="1" cols="33">
+          
+        </textarea>
+        <label for="noun">Add noun:</label>
+        <textarea id="noun" name="noun"
+          rows="1" cols="33">
+        </textarea>
+        <label for="verb">Add verb:</label>
+        <textarea id="verb" name="verb"
+          rows="1" cols="33">
+        </textarea>
+        <label for="adverb">Add adverb:</label>
+        <textarea id="adverb" name="adverb"
+          rows="1" cols="33">
+        </textarea>
+        <button class = "b1" id = "comment-button">
+          Click here to view comments from the survey
+        </button>
+        <p id = "comments">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        </p>  
+        <button class = "b1" id = "random-button">
+          Click here to generate a random sentence
+        </button>
+        <p id = "comments2">
+          a
+        </p>    
         <h2 id = "Links"> Useful resources for further reading:</h2>
         <!-- (Bootstrap 2022) Code copied from https://getbootstrap.com/docs/4.0/components/list-group/ with some changes, see README for details-->
         <div class = "list-group bg-primary" id = "list-1">
@@ -96,6 +135,21 @@
           <a href = "https://www.hdruk.ac.uk/wp-content/uploads/2021/08/Group1_Report.pdf" target = "blank" class="list-group-item list-group-item-action list-item bg-secondary text-light"> Mental Health in the Tech Workplace</a>
           <a href = "https://www.information-age.com/we-are-at-a-critical-point-for-mental-health-in-the-tech-sector-123489906/" target = "blank" class="list-group-item list-group-item-action list-item bg-secondary text-light">‘We Are at a Critical Point for Mental Health in the Tech Sector'</a>
       </div>
+      
+      <!-- (Bootstrap 2022) Code copied from https://getbootstrap.com/docs/4.0/components/forms/ with some changes, see README for details-->
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Message</label>
+          <input type="text-box" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button  id = "submit-button" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <script src="script.js"></script> 
     </body>
-    <script src="script.js"></script> 
+    
 </html>
