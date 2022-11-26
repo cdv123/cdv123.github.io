@@ -1,26 +1,25 @@
 // checks whether content is visible to the user or not for fade animations, and sets the default svg width and height
 document.addEventListener("DOMContentLoaded", function(){
-    let svg_width = 1000
-    let svg_height = 200
-    svgs = document.querySelectorAll("svg")
+    let svg_width = 1000;
+    let svg_height = 200;
+    svgs = document.querySelectorAll("svg");
     svgs.forEach((element) => {
-        element.setAttribute("width", svg_width)
-        element.setAttribute("height", svg_height)
+        element.setAttribute("width", svg_width);
+        element.setAttribute("height", svg_height);
+        element.setAttribute("viewBox", "0 0 1000 200");
     });
 })
 
-// const btn2 = document.getElementById("dark-mode-button")
-// const button2 = new buttons(btn2, "black", "1px solid white", "black")
 // checks whether content is visible to the user or not for fade animations
 const observer = new IntersectionObserver( function(entries) {
     entries.forEach((entry) => {
         //if visible, add class animate to start animation
         if (entry.isIntersecting){
-            entry.target.classList.add("animate")
+            entry.target.classList.add("animate");
         }
         //resets so animation can be done again
         else{
-            entry.target.classList.remove("animate")
+            entry.target.classList.remove("animate");
         }
     })
 })
@@ -29,59 +28,31 @@ y_height = [200, 160, 120];
 x_pos = [100,200,300];
 y_pos = 10;
 
-d3.select("body")
-  .selectAll("rect")
-  .attr("fill", "black")
-  .data(y_height)
-  .attr("height", function (d){
-    return d
-  })
-  .data(x_pos)
-  .attr("x", function(d){
-    return d
-  })
-  .data(y_pos)
-  .attr("y", function(d){
-    return d;
-  });
-
-// text = ["quis nostrud exercitation ullamco laboris", "nisi ut aliquip ex ea commodo", "consequat. Duis aute irure dolor in reprehenderit"]
+d3.json("/Dataset/survey.json", function(data){
+    console.log(data);
+    console.log(1);
+});
 // d3.select("body")
-//   .selectAll("#comments")
-//   .data(text)
-//   .text(function (d){
+//   .selectAll("rect")
+//   .attr("fill", "black")
+//   .data(y_height)
+//   .attr("height", function (d){
 //     return d
 //   })
-//   .enter()
-//   .append("p")
-//   .text(function(d){
+//   .data(x_pos)
+//   .attr("x", function(d){
 //     return d
 //   })
-
-let commentBtn = document.getElementById("comment-button");
-let comments = document.getElementById("comments");
-    commentBtn.addEventListener("click", function randomComment(){
-        let randNum = Math.floor(Math.random()*48);
-        // d3.csv("Dataset/shortSurvey.csv")
-        //   .row(function(d){return { comments:parseComments(d.comments)}})
-        //   .get(function(error,data){
-        //   })
-        // function(data){
-        //     console.log(data)
-        //     while (data[randNum] == "NA");{
-        //         console.log(data[randNum])
-        //         randNum = Math.floor(Math.random()*48)
-        //     }
-        //     let newText = data[randNum]
-        // d3.select("body")
-        //   .selectAll("comments")
-        //   .data(newText)
-        //   .text(function (d){
-        //     return d
-        //   })
-    
-        })
-    // })
+//   .data(y_pos)
+//   .attr("y", function(d){
+//     return d;
+//   });
+    // let commentBtn = document.getElementById("comment-button");
+    // let comments = document.getElementById("comments");
+    //     commentBtn.addEventListener("click", function randomComment(){
+    //         let randNum = Math.floor(Math.random()*48);
+    //         d3.csv("Dataset/shortSurvey.csv")
+    //         })
 let submitButton = document.getElementById("submit-button");
 //sets up fadeLeft and fadeRight and calls the function for each element in calss
 const fadeLeft = document.querySelectorAll(".fade-left");
@@ -92,24 +63,24 @@ fadeRight.forEach((element) => observer.observe(element));
 let darkMode = document.getElementById("dark-mode-button");
 let home = document.getElementById("home");
 let btns = document.querySelectorAll(".b1");
-let count = 1
+let count = 1;
 window.onload = function(){
     home.style.fontSize = "80px";
     home.style.color = "white"
     setTimeout(function(){
         home.style.color = "black";
-    }, 1000)   
+    }, 700)   
 }
 class buttons{
     constructor(button, color, borderStyle, backgroundColor){
-        this.button = button
-        this.button.style.color = color
-        this.button.style.border = borderStyle
-        this.button.style.backgroundColor = backgroundColor
+        this.button = button;
+        this.button.style.color = color;
+        this.button.style.border = borderStyle;
+        this.button.style.backgroundColor = backgroundColor;
     }
     colorSwitch(newColor, newBorderStyle, newBackgroundColor){
-        this.button.style.color = newColor
-        this.button.style.border = newBorderStyle
+        this.button.style.color = newColor;
+        this.button.style.border = newBorderStyle;
         this.button.style.backgroundColor = newBackgroundColor
     }
 
@@ -158,7 +129,7 @@ function switchColours(){
         darkMode.innerHTML = "Dark Mode";
         navBar.classList.remove("bg-info");
         navBar.classList.add ("bg-light");
-        for (i = 0; i<buttonList.length; i++); {
+        for (i = 0; i<buttonList.length-1; i++); {
             buttonList[i].colorSwitch("aquamarine", "1px solid aquamarine", "black");
         }
     }
@@ -169,25 +140,9 @@ function switchColours(){
         document.body.style.color = "#434343";
         home.style.color = "black";
         darkMode.innerHTML = "Light Mode";
-        for (i = 0; i<btns.length; i++);{
+        for (i = 0; i<btns.length-1; i++);{
             buttonList[i].colorSwitch("black", "1px solid black", "aquamarine");
         }
     }
     count = count + 1;
 }
-
-
-    // let message = document.getElementById("mental-health-button")
-    // let navbar = document.querySelector("nav")
-    // let p = document.querySelectorAll("h2")
-    // p.forEach(function(element){
-    // element.addEventListener("mouseover", interesting)
-    // })
-    // function interesting(){
-    //     alert("I hope you find this interesting")
-    // }
-    // message.addEventListener("mouseover", sendAlert)
-    // navbar.addEventListener("mouseover", sendAlert)
-    // function sendAlert(){
-    //     alert("CLICK ME!!!!")
-    // }
