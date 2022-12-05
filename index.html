@@ -32,12 +32,34 @@
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="#">Home</a>
           <a class="nav-item nav-link active" href="#mental-health-button">Culture of tech industry and mental health</a>
-          <a class="nav-item nav-link active" href="#analysis-data">Analysis of data</a>
-          <a class="nav-item nav-link active" href="#Links">Extra resources</a>
+          <a class="nav-item nav-link active" href="#what-to-do">What tech companies should do</a>
+          <a class="nav-item nav-link active" href="#analysis-of-data">Analysis of data</a>
+          <a class="nav-item nav-link active" href="#Queries">Queries</a>
+          <a class="nav-item nav-link active reference" href="#References">References</a>
         </div>
     </div>
     
   </nav>
+    <button class = "right-dropdown reference">
+    &#8592
+    </button>
+    <div class = "right-modal">
+      <h2>Bibliography</h2>
+      <h3> Images </h3>
+      <p>1 - HelpGuide (2022) Building Better Mental Health HelpGuide.org. Available at:<a target = "_blank" href="https://www.helpguide.org/articles/mental-health/building-better-mental-health.htm">https://www.helpguide.org/articles/mental-health/building-better-mental-health.htm</a>  (Accessed: October 28, 2022). <br>
+         2 - Kasbergen, N. (2019) Supporting mental health in the tech workplace, InfoQ. InfoQ. Available at: <a target = "_blank" href="https://www.infoq.com/articles/mental-health-tech-workplace/">https://www.infoq.com/articles/mental-health-tech-workplace/</a> (Accessed: October 29, 2022).  </p>
+      <h3> Text </h3>
+      <p>
+         3 - CPS Group. (2019) Why do tech workers suffer more from mental health issues?, CPS Group UK. Available at: <a target = "_blank" href="https://www.cpsgroupuk.com/blog/why-do-tech-workers-suffer-more-from-mental-health-issues">https://www.cpsgroupuk.com/blog/why-do-tech-workers-suffer-more-from-mental-health-issues</a> (Accessed: October 28, 2022). <br>
+         4 - 101 Data Solutions (2022) Tech workers are 5x more likely to be depressed –it's time to make mental health a priority in our industry&nbsp;&nbsp;, 101 Data Solutions. Available at: <a target = "_blank" href="https://101datasolutions.co.uk/tech-workers-are-5x-more-likely-to-be-depressed-its-time-to-make-mental-health-a-priority-in-our-industry/">https://101datasolutions.co.uk/tech-workers-are-5x-more-likely-to-be-depressed-its-time-to-make-mental-health-a-priority-in-our-industry/</a> (Accessed: October 29, 2022).
+         5 - Inbayuk (2022) The mental state of the Tech Industry, Inbay. Available at: <a href="https://www.inbay.co.uk/the-mental-state-of-the-tech-industry" target="_blank" rel="noopener noreferrer">https://www.inbay.co.uk/the-mental-state-of-the-tech-industry</a> / (Accessed: December 4, 2022). 
+         6 - IDG Connect (2019) How UK's tech sector can support mental health in the Workplace, IDG Connect. IDG Connect. Available at: <a href="https://www.idgconnect.com/article/3581683/how-uk-s-tech-sector-can-support-mental-health-in-the-workplace.html" target="_blank" rel="noopener noreferrer">https://www.idgconnect.com/article/3581683/<br>how-uk-s-tech-sector-can-support-mental-health-in-the-workplace.html</a> (Accessed: December 4, 2022).   
+      </p>
+      <h3> Dataset</h3>
+      <p>
+        7 - Dataset obtained from <a href="https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey" target="_blank">https://www.kaggle.com/datasets/osmi <br> /mental-health-in-tech-survey</a>.
+      </p>
+    </div>
       <section id = "section1">
         <h1 id = "home">Mental Health in Tech</h1>
         <p id = "sub-header"> An analysis on the state of mental health for people working in the tech industry</p>
@@ -50,9 +72,9 @@
           <button type = "button" class = "additional-info b1" id ="mental-health-button"> Click here to watch video detailing the problem </button>
         </a>
         <!--(CPS Group, 2019) see README for more details-->
-        <ul class = "list-of-text fade-right" id = "problem-text">
-            <li> The <span class = "italic">British Interactive Media Association</span> (BIMA) recently revealed that tech workers are five times more likely to suffer from a mental health problem, compared to the wider population. Between four and 10 per cent of UK adults are thought to experience depression at some point in their lives but this figure pales in comparison to the tech sector, where as many as <span class = "bold">52 per cent </span>of the workforce admitted to suffering with stress, anxiety and depression at work. </li>
-            <li>Two thirds of those surveyed stated that their work has caused high levels of stress, with <span class = "bold"> 13 per cent </span> of these workers experiencing this emotional strain on a constant basis. This work-based stress is also causing severe prolonged headaches, sleep deprivation and anxiety attacks. Stress is also more commonly experienced by women in tech, with BIMA finding that men were just nine per cent as likely to experience high levels of workplace stress.</li>
+        <ul class = "fade-right" id = "problem-text">
+            <li> The <span class = "italic">British Interactive Media Association</span> (BIMA) recently revealed that tech workers are five times more likely to suffer from a mental health problem, compared to the wider population. Between four and 10 per cent of UK adults are thought to experience depression at some point in their lives but this figure pales in comparison to the tech sector, where as many as <span class = "bold">52 per cent </span>of the workforce admitted to suffering with stress, anxiety and depression at work. <span class = "reference underline">(CPS Group, 2019)</span></li>
+            <li>Two thirds of those surveyed stated that their work has caused high levels of stress, with <span class = "bold"> 13 per cent </span> of these workers experiencing this emotional strain on a constant basis. This work-based stress is also causing severe prolonged headaches, sleep deprivation and anxiety attacks. Stress is also more commonly experienced by women in tech, with BIMA finding that men were just nine per cent as likely to experience high levels of workplace stress. <span class = "reference underline" >(CPS Group, 2019)</span></li>
         </ul>
         
         
@@ -67,76 +89,54 @@
                 </iframe>
             </div>
         </div>
-      </section>
+      
         <!--Image obtained from https://www.helpguide.org/articles/mental-health/building-better-mental-health.htm see README for more details-->
         
         <h2 id ="why"> Culture of tech industry and mental health</h2>
         <!--(Kasbergen, N. 2019)-->
         <img class = "image2 fade-right img-fluid" src="Images\mental-health-tech-workplace-1556808890382.jpg" alt="mental health picture">
-        <!-- (101 Data Solutions, 2022) see README for more details-->
-        <ul id ="why-text" class = "fade-left">
-            <li>Employees may feel isolated and burdened by difficult projects or exhausted if they believe they have no control over their work. In addition, relentless and continuous change, common in tech, may significantly impact mental health. Long hours may also contribute to higher rates of absenteeism and more mistakes on the job. Employees may feel stressed by their workload, have inadequate training, or strive for unrealistic goals.</li>
-            <li>Mental health should be considered as critical as physical health by technology firms, as a healthy work environment results in higher productivity and job satisfaction. </li>
+        <!--(Bulpit, 2022) see README for more details-->
+        <ul id ="why-text" class = "fade-right">
+            <li >Employees may feel isolated and burdened by difficult projects or exhausted if they believe they have no control over their work. In addition, relentless and continuous change, common in tech, may significantly impact mental health. Long hours may also contribute to higher rates of absenteeism and more mistakes on the job. Employees may feel stressed by their workload, have inadequate training, or strive for unrealistic goals. <span class = "reference underline" >(Bulpit, 2022)</span> </li>
+            <li id ="what-to-do">Mental health should be considered as critical as physical health by technology firms, as a healthy work environment results in higher productivity and job satisfaction. <span class = "reference underline"> (Bulpit, 2022) </span></li>
         </ul>
-        <h2 id = "analysis-data"> Analysis of data</h2>
-        <svg>
-          <rect width = "50"
-          style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
-          <rect width = "50"
-          style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
-          <rect width = "50"
-          style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
-        </svg>
-        <svg>
-          <circle r = "100" cx = "200" cy = "100" fill = "blue"/> 
-          <circle r = "50" cx = "200" cy = "100" fill = "transparent"
-          stroke = "black"
-          stroke-width = "100"
-          stroke-dasharray = "calc(35 * 314.2 / 100) 314.2"/> 
-        </svg>
-        <p class = "place-holder">
-            This section will contain my analysis of the dataset from https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey which is a 2014 survey on attitudes towards and frequency of mental health issues in the tech industry
-        </p>
+        <h2 id = "to-do"> What should tech companies do?</h2>
+        <!--(Kasbergen, N. 2019)-->
+        <img class = "image3 fade-left img-fluid" src="Images\mental-health-tech-workplace-1556808890382.jpg" alt="mental health picture">
+        <!--(Inbayuk, 2022)-->
+        
+        <ul class = "fade-left" id = "solution">
+            <li>Solving the issue of employee mental health in the tech industry begins and ends with its leaders. Leaders must normalise conversations around mental health issues, communicate exactly what resources are made available, and offer flexible work options for their valuable employees.In most cases, this won’t require a complete overhaul of an organisation’s systems and processes – it can be as simple as holding regular meetings to remind employees what resources are available or empathetic conversations with individuals who seem to be struggling. <span class = "reference underline"> (Inbayuk, 2022) </span></li>
+            <!--(IDG Connect, 2019)-->
+            <li id = "analysis-of-data">Liam Butler, AVP at SumTotal concurs with this: "Despite increased focus and efforts, we are still a long way from regarding or treating mental and physiological health as the same. We need to help to reduce the secrecy and stigma surrounding mental health issues, encourage employees to step forward if they are having mental health problems and make employers reconsider their own attitudes to mental health related illnesses. <span class = "reference underline"> (IDG Connect, 2019) </span></li>
+        </ul>
+        <h2> Analysis of data</h2>
+        <p id = "analysis-p"> Below is a visualisation of a subset of a survey on mental health in tech, click the dropdown to select which question you would like to see the answers of, and click any bar to see the responses given</p>
+        <div id = "myChart" class = "fade-right">
+          <div id = "select_btn">
+          <select name="criteria" class = "b1" id="criteria">
+            <option value="family_history" >Do you have a family history of mental illness?</option>
+            <option value="treatment">Have you sought treatment for a mental health condition?</option>
+            <option value="work_interfere">If you have a mental health condition, do you feel that it <br> interferes with your work?</option>
+            <option value="benefits">Does your employer provide mental health benefits?</option>
+            <option value="seek_help">Does your employer provide resources to learn more about mental health issues and how to seek help?</option>
+            <option value="anonymity">Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources?</option>
+            <option value="leave"> How easy is it for you to take medical leave for a mental health condition?</option>
+            <option value="mental_health_consequence">Do you think that discussing a mental health issue with your employer would have negative consequences?</option>
+            <option value="phys_health_consequence">Do you think that discussing a physical health issue with your employer would have negative consequences?</option>
+            <option value="coworkers">Would you be willing to discuss a mental health issue with your coworkers?</option>
+            <option value="supervisor">Would you be willing to discuss a mental health issue with your direct supervisor(s)?</option>
+            <option value="mental_vs_physical">Do you feel that your employer takes mental health as seriously as physical health?</option>
+            <option value="obs_consequence">Have you heard of or observed negative consequences for coworkers with mental health conditions in your workplace?</option>
+          </select>
+          </div>
+        </div>
+        <div class = "popup">
+          <h3></h3>
+          <p id = "popup-info">hi</p>
+        </div>
 
-        <label for="adj">Add adjective:</label>
-        <textarea id="adj" name="adj"
-          rows="1" cols="33">
-          
-        </textarea>
-        <label for="noun">Add noun:</label>
-        <textarea id="noun" name="noun"
-          rows="1" cols="33">
-        </textarea>
-        <label for="verb">Add verb:</label>
-        <textarea id="verb" name="verb"
-          rows="1" cols="33">
-        </textarea>
-        <label for="adverb">Add adverb:</label>
-        <textarea id="adverb" name="adverb"
-          rows="1" cols="33">
-        </textarea>
-        <button class = "b1" id = "comment-button">
-          Click here to view comments from the survey
-        </button>
-        <p id = "comments">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-        </p>  
-        <button class = "b1" id = "random-button">
-          Click here to generate a random sentence
-        </button>
-        <p id = "comments2">
-          a
-        </p>    
-        <h2 id = "Links"> Useful resources for further reading:</h2>
-        <!-- (Bootstrap 2022) Code copied from https://getbootstrap.com/docs/4.0/components/list-group/ with some changes, see README for details-->
-        <div class = "list-group bg-primary" id = "list-1">
-          <a href = "https://www.diversityintech.co.uk/workplace-diversity-and-mental-health-in-tech" target = "blank" class="list-group-item list-group-item-action list-item bg-secondary text-light"> Workplace Diversity and Mental Health in Tech  </a>
-          <a href = "https://www.techforgood.net/ThoughtLeaders/TechForGood/2020/July/span-patrick-samy/mental-health-the-nemesis-of-the-tech-industry/" target = "blank" class="list-group-item list-group-item-action list-item bg-secondary text-light"> Mental Health - the Nemesis of the Tech Industry</a>
-          <a href = "https://www.inbay.co.uk/the-mental-state-of-the-tech-industry/" target = "blank" class="list-group-item list-group-item-action list-item bg-secondary text-light"> The Mental State of the Tech Industry</a>
-          <a href = "https://www.hdruk.ac.uk/wp-content/uploads/2021/08/Group1_Report.pdf" target = "blank" class="list-group-item list-group-item-action list-item bg-secondary text-light"> Mental Health in the Tech Workplace</a>
-          <a href = "https://www.information-age.com/we-are-at-a-critical-point-for-mental-health-in-the-tech-sector-123489906/" target = "blank" class="list-group-item list-group-item-action list-item bg-secondary text-light">‘We Are at a Critical Point for Mental Health in the Tech Sector'</a>
-      </div>
-      
+      <h2 id = "Queries"> If you have any queries related to this article, please complete this form:</h2>
       <!-- (Bootstrap 2022) Code copied from https://getbootstrap.com/docs/4.0/components/forms/ with some changes, see README for details-->
       <form>
         <div class="form-group">
@@ -145,11 +145,12 @@
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Message</label>
-          <input type="text-box" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="exampleInputPassword1">Question</label>
+          <input type="text-box" class="form-control" id="exampleInputPassword1" placeholder="Your question">
         </div>
-        <button  id = "submit-button" type="submit" class="btn btn-primary">Submit</button>
+        <button type = "submit" id = "submit-button" class="b1">Submit</button>
       </form>
+      </section>
       <script src="script.js"></script> 
     </body>
     
