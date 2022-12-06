@@ -158,8 +158,10 @@ h2{
     width: 30%;
     margin-right: 8%;
     margin-bottom: 10%;
-    clear: left;
+    margin-top: 5%;
+    margin-right: 10%;
     height: auto;
+    clear: right;
 }
 
 #to-do{
@@ -169,6 +171,7 @@ h2{
     margin-left: 4%;
     width: 50%;
     margin-bottom: 5%;
+    
 }
 #mental-health-button{
     padding: 2% 5%;
@@ -326,13 +329,12 @@ option{
     }
     #problem-text{
         float: none;
-        margin: 0;
+        margin-left: 0;
         width: 90%;
     }
     .image1{
         float:none;
         width: 70%;
-        margin: 0;
         height: auto;
         margin-left: 15%;
     }
@@ -342,21 +344,25 @@ option{
         margin-left: 0%;
 
     }
-    #button-container{
-        width: 80%;
-        position: relative;
-        left: 15%;
-        float: none;
-        
+    #mental-health-button{
+        width: 40%;
+        margin-right: 10%;
+        margin-left: 25%;
     }
     .additional-info{
         padding: 2% 5%;
         text-align: center;
+        right: 10%;
+        max-width: 100%;    
+    }
+    #button-container{
+        float:none;
+        width: 50%;
+
     }
     .image2{
         float:none;
         width: 50%;
-        margin: 0;
         height: auto;
         margin-left: 20%;
     }
@@ -369,7 +375,7 @@ option{
     }
     #why-text{
         float: none;
-        margin: 0;
+        margin-left: 0;
         width: 90%;
         margin-top: 5%;
     }
@@ -381,7 +387,7 @@ option{
     }
     #solution{
         float: none;
-        margin: 0;
+        margin-left: 0;
         width: 90%;
         margin-top: 5%;
     }

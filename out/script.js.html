@@ -1,5 +1,34 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: script.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: script.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * checks if content is visible to the user for fade in animations, if visible, adds class animate, otherwise, removes it.
+ * @constructor
  * @param {object} entries - The object fading in.
  */
 const observer = new IntersectionObserver( function(entries) {
@@ -15,13 +44,18 @@ const observer = new IntersectionObserver( function(entries) {
     })
 })
 
-let text = ""
-let count3 = 0
+//code taken from https://bl.ocks.org/mbostock/6fead6d1378d6df5ae77bb6a719afcb2 with changes
+//from https://d3-graph-gallery.com/graph/barplot_stacked_basicWide.html
+
 /**
  * Creates a stacked bar chart, code for stacked bar chart, with edits from 
- * (Holtz, 2022), see README for more details
+ * https://bl.ocks.org/mbostock/6fead6d1378d6df5ae77bb6a719afcb2, legend, with changes from 
+ * https://d3-graph-gallery.com/graph/barplot_stacked_basicWide.html
+ * @constructor
  * @param {string} word - specifies what column of the dataset to select to make bar chart.
  */
+let text = ""
+let count3 = 0
 function createChart(word){
     /**
      * Variables declared at the beginning of the function.
@@ -62,7 +96,7 @@ function createChart(word){
     * @param {object} data - the dataset.
     */
     d3.csv("/Dataset/survey.csv").then(function(data){
-        for (let i =0;i < 1259;i++){
+        for (let i =0;i &lt; 1259;i++){
                 if (!r.includes(data[i][word])){
                     r.push(data[i][word])
                     numR.push([])
@@ -74,15 +108,15 @@ function createChart(word){
         }
         // only select first few countries as not enough data on other countries for good visualisation, and not enough space to include all countries.
         c = c.slice(0,11)
-        for (let i = 0; i<cols; i++){
-            for (let j =0; j<c.length;j++){
+        for (let i = 0; i&lt;cols; i++){
+            for (let j =0; j&lt;c.length;j++){
                 numR[i].push(0)
             }
         }
-        for (let i = 0; i<1259; i++){
-            for (let j =0; j<c.length;j++){
+        for (let i = 0; i&lt;1259; i++){
+            for (let j =0; j&lt;c.length;j++){
                 if (data[i].Country == c[j]){
-                    for (let k =0; k<cols;k++){
+                    for (let k =0; k&lt;cols;k++){
                         if(data[i][word] == r[k]){
                             numR[k][j]+=1
                         }
@@ -93,10 +127,9 @@ function createChart(word){
         }
         var a = [...c]
         /**
-         * @name shortenCountryNames
          * For loop to shorten country names to fit nicely in bar chart.
          */
-        for(let i = 0; i<c.length;i++){
+        for(let i = 0; i&lt;c.length;i++){
             if (c[i]=="United States"){
                 c[i] = "US"
             }
@@ -111,22 +144,22 @@ function createChart(word){
         /**
          * For loop to convert number of each response to percentage of each response
          */
-        for(let i =0; i<c.length;i++){
-            for(let j = 0; j<cols; j++){
+        for(let i =0; i&lt;c.length;i++){
+            for(let j = 0; j&lt;cols; j++){
                 total += numR[j][i]
             }
-            for(let j = 0; j<cols; j++){
+            for(let j = 0; j&lt;cols; j++){
                 numR[j][i] = (numR[j][i]/total)*100
             }
             total = 0
         }
-        for(let i = 0; i<c.length; i++){
+        for(let i = 0; i&lt;c.length; i++){
             newData.push(
                 {
                     Country: c[i]
                 }
             )
-            for(let j =0; j<r.length; j++){
+            for(let j =0; j&lt;r.length; j++){
                 newData[i][r[j]] = numR[j][i]
             }
         }
@@ -174,7 +207,7 @@ function createChart(word){
                        * @param {array} - updated dataset
                        */
                       .text(function(d){
-                        for (let i =0; i<a.length; i++){
+                        for (let i =0; i&lt;a.length; i++){
                             if (a[i].slice(0,2).toUpperCase() == d.data.Country){
                                 text =  "Country: " + String(a[i]) 
                             }
@@ -186,7 +219,7 @@ function createChart(word){
                         else if (d.data.Country == "US"){
                             text =  "Country: United States"
                         }
-                    for(let i =0; i<r.length; i++){
+                    for(let i =0; i&lt;r.length; i++){
                         text += ", " + r[i] + ": " + d.data[r[i]].toFixed(2) + "%"
                     }
 
@@ -200,21 +233,19 @@ function createChart(word){
             })
         
     /**
-     * @name timeoutFunction
      * After 200ms, function called to change opacity of bars (for animation) and makes bars more interactive.
      * This is applied after a 200ms timer to ensure everything else has been loaded first.
      * Count3 used to determine if popup present or not.
-     * Adds event so that when the user clicks anywhere when the popup if up, the popup if removed. 
+     * Adds event so that when the user clicks anywhere when the popup if up, the popup if removed.
+     * Adds event so that when the user clicks on a bar, the popup with that bar's information pops up, and pop up position depends on location of cursor.
      */
-    setTimeout(
-        function(){
+    setTimeout(function(){
         d3.selectAll("rect")
           .style("opacity", 1)
         let bars = document.querySelectorAll(".bar")
         let popup = document.querySelector(".popup")
-        if (count3 == 0){
+        console.log(bars)
         document.addEventListener("click", function(){
-            console.log(count3)
             if(count3 %2 == 1){
                 count3+=1
             }
@@ -222,13 +253,8 @@ function createChart(word){
                 popup.style.display = "none";
             }
             
-        })}
-        bars.forEach(
-        /**
-         * Adds event so that when the user clicks on a bar, the popup with that bar's information pops up, and pop up position depends on location of cursor.
-         * @param {object} element - bar that the popup is being added to
-         */
-        function(element){
+        })
+        bars.forEach(function(element){
             
         element.addEventListener("click", function(event){
             popup.style.display = "block";
@@ -245,7 +271,6 @@ function createChart(word){
         })
         
       })
-      console.log(count3)
     }, 200)
     
     
@@ -259,7 +284,7 @@ function deleteChart(){
 }
 /**
  * Making parts of website into JS variables for manipulation later on.
- * @name Initiliasing-Variables  
+ * 
  */
 const submitButton = document.getElementById("submit-button");
 const fadeLeft = document.querySelectorAll(".fade-left");
@@ -278,14 +303,13 @@ const rightModal = document.querySelector(".right-modal")
 const references = document.querySelectorAll(".reference")
 /**
  * Function so that any element with class fade left or fade right is monitored
- * @param {object} - element with class fadeleft/faderight
  */
 fadeLeft.forEach((element) => observer.observe(element));
 fadeRight.forEach((element) => observer.observe(element));
 /**
  * Sets up animation for title when the website loads, sets a 0.7 second timer to change colour of title, also changes size of title.
- * @name onLoad
  */
+
 window.onload = function(){
     home.style.fontSize = "80px";
     home.style.color = "white"
@@ -296,28 +320,21 @@ window.onload = function(){
     
 }
 
-
+/**
+ * Initialises class of buttons
+ * @param {object} button - The DOM representation of the button
+ * @param {string} color - Colour of button
+ * @param {string} borderStyle - Border style of button
+ * @param {string} backgroundColor - Background colour of button
+ * @constructor
+ */
 class buttons{
-    /**
-     * Initialises class of buttons
-     * @param {object} button - The DOM representation of the button
-     * @param {string} color - Colour of button
-     * @param {string} borderStyle - Border style of button
-     * @param {string} backgroundColor - Background colour of button
-     * @constructor
-     */
     constructor(button, color, borderStyle, backgroundColor){
         this.button = button;
         this.button.style.color = color;
         this.button.style.border = borderStyle;
         this.button.style.backgroundColor = backgroundColor;
     }
-    /**
-     * Instance method to change colour of button
-     * @param {string} newColor - specifies new colour of button
-     * @param {string} newBorderStyle - specifies new border style of button
-     * @param {string} newBackgroundColor - specifies new background colour of button
-     */
     colorSwitch(newColor, newBorderStyle, newBackgroundColor){
         this.button.style.color = newColor;
         this.button.style.border = newBorderStyle;
@@ -325,11 +342,11 @@ class buttons{
     }
 
 }
-let buttonList = []
 /**
  * For loop used to add buttons to class and to array button list
  */
-for (let i = 0; i<btns.length; i++)
+let buttonList = []
+for (let i = 0; i&lt;btns.length-1; i++)
 {
     buttonList.push(new buttons(btns[i], "black", "1px solid black", "aquamarine"));
     let element = buttonList[i];
@@ -412,12 +429,12 @@ function shiftModal(){
     if (count2 %2 == 0){
         rightModal.classList.add("shift-modal")
         rightDropdown.classList.add("shift-dropdown")
-        rightDropdown.innerHTML = "&#8594"
+        rightDropdown.innerHTML = "&amp;#8594"
     }   
     else{
         rightModal.classList.remove("shift-modal")
         rightDropdown.classList.remove("shift-dropdown")
-        rightDropdown.innerHTML = "&#8592"
+        rightDropdown.innerHTML = "&amp;#8592"
     }
 }
 /**
@@ -432,7 +449,7 @@ function switchColours(){
         darkMode.innerHTML = "Dark Mode";
         navBar.classList.remove("bg-info");
         navBar.classList.add ("bg-light");
-        for (let i = 0; i<buttonList.length; i++) {
+        for (let i = 0; i&lt;buttonList.length-1; i++) {
             buttonList[i].colorSwitch("aquamarine", "1px solid aquamarine", "black");
         }
         rightModal.style.backgroundColor    = "black";
@@ -445,7 +462,7 @@ function switchColours(){
         document.body.style.color = "#434343";
         home.style.color = "black";
         darkMode.innerHTML = "Light Mode";
-        for (let i = 0; i<btns.length; i++){
+        for (let i = 0; i&lt;btns.length-1; i++){
             buttonList[i].colorSwitch("black", "1px solid black", "aquamarine");
         }
         rightModal.style.backgroundColor = "aquamarine";
@@ -453,3 +470,26 @@ function switchColours(){
     }
     count = count + 1;
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="buttons.html">buttons</a></li><li><a href="observer.html">observer</a></li><li><a href="text.html">text</a></li></ul><h3>Global</h3><ul><li><a href="global.html#btnHover1">btnHover1</a></li><li><a href="global.html#btnHover2">btnHover2</a></li><li><a href="global.html#buttonList">buttonList</a></li><li><a href="global.html#deleteChart">deleteChart</a></li><li><a href="global.html#shiftModal">shiftModal</a></li><li><a href="global.html#submitButton">submitButton</a></li><li><a href="global.html#switchColours">switchColours</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Tue Dec 06 2022 18:02:06 GMT+0000 (Greenwich Mean Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
