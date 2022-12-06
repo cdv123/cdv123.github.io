@@ -191,7 +191,17 @@ function createChart(word){
         let bars = document.querySelectorAll(".bar")
         let popup = document.querySelector(".popup")
         console.log(bars)
+        document.addEventListener("click", function(){
+            if(count3 %2 == 1){
+                count3+=1
+            }
+            else{
+                popup.style.display = "none";
+            }
+            
+        })
         bars.forEach(function(element){
+            
         element.addEventListener("click", function(){
             popup.style.display = "block";
             let popupInfo = document.getElementById("popup-info")
@@ -201,14 +211,13 @@ function createChart(word){
             popupInfo.style.top = event.clientY + "px"
             popupInfo.style.left = event.clientX + "px"
             console.log(text)
-            count3 += 1
-            document.addEventListener("click", function(){
-                if (count3 % 2 == 0){
-                popup.style.display = "none";
-
-                }
-            })})
+            if(count3 %2 == 0){
+                count3+=1
+            }
+        })
+        
       })
+      console.log(count3)
     }, 400)
     
     
@@ -328,6 +337,7 @@ console.log(text)
 window.addEventListener("resize", function(){
     deleteChart();
     createChart(dropdown.value)
+    
 })
 
 dropdown.addEventListener("click", function(){  
