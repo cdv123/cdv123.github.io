@@ -321,7 +321,7 @@ option{
         float: none;
     }
     #sub-header{
-        right: 6%;
+        right: 15%;
     }
     #problem-text{
         float: none;
@@ -343,8 +343,9 @@ option{
     }
     #button-container{
         width: 80%;
-        margin-left: 5%;
-        margin-right: 5%;
+        position: relative;
+        left: 15%;
+        float: none;
         
     }
     .additional-info{
@@ -352,6 +353,13 @@ option{
         text-align: center;
     }
     .image2{
+        float:none;
+        width: 50%;
+        margin: 0;
+        height: auto;
+        margin-left: 20%;
+    }
+    .image3{
         float:none;
         width: 50%;
         margin: 0;
@@ -367,6 +375,15 @@ option{
     h2{
         margin-top: 5%;
     }
+    #to-do{
+        width: 100%;
+    }
+    #solution{
+        float: none;
+        margin: 0;
+        width: 90%;
+        margin-top: 5%;
+    }
     .place-holder{
         width: 90%;
         margin: 0;
@@ -378,6 +395,16 @@ option{
       }
     iframe{
         height: 70%;
+    }
+    .right-modal{
+        right: -50%;
+        width: 50%;
+    }
+    .shift-modal{
+        right: 0%;
+    }
+    .shift-dropdown{
+        right: 49.8%;
     }
     .list-group{
         width: 90%;

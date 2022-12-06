@@ -28,6 +28,7 @@ const observer = new IntersectionObserver( function(entries) {
  * @param {string} word - specifies what column of the dataset to select to make bar chart.
  */
 var text = ""
+var count3 =0
 function createChart(word){
     let colours = ["#ADD8E6", "#0000FF","#D3D3D3","#808080","#454545"]
     let c = []
@@ -36,9 +37,9 @@ function createChart(word){
     let newData = []
     let cols = 0
     let chart = document.getElementById("myChart")
-    var margin = {top: chart.offsetWidth/20, right:chart.offsetWidth/20, bottom: chart.offsetHeight/10, left: chart.offsetWidth/10},
-        width = chart.offsetWidth - margin.right - margin.left;
-        height = width/2
+    var margin = {top: chart.offsetWidth/20, right:0, bottom: chart.offsetHeight/10, left: chart.offsetWidth/10},
+        width = chart.offsetWidth/1.3
+        height = chart.offsetWidth/2
     var svg = d3.select("#myChart")
         .attr("viewBox", "0 0 " + width + " " + height)
         .append("svg")
@@ -187,6 +188,27 @@ function createChart(word){
     setTimeout(function(){
         d3.selectAll("rect")
           .style("opacity", 1)
+        let bars = document.querySelectorAll(".bar")
+        let popup = document.querySelector(".popup")
+        console.log(bars)
+        bars.forEach(function(element){
+        element.addEventListener("click", function(){
+            popup.style.display = "block";
+            let popupInfo = document.getElementById("popup-info")
+            popupInfo.innerHTML = text
+            popupInfo.style.width = "fit-content"
+            popupInfo.style.height = "fit-content"
+            popupInfo.style.top = event.clientY + "px"
+            popupInfo.style.left = event.clientX + "px"
+            console.log(text)
+            count3 += 1
+            document.addEventListener("click", function(){
+                if (count3 % 2 == 0){
+                popup.style.display = "none";
+
+                }
+            })})
+      })
     }, 400)
     
     
@@ -227,25 +249,7 @@ window.onload = function(){
     home.style.color = "white"
     setTimeout(function(){
         home.style.color = "black";
-        let bars = document.querySelectorAll(".bar")
-        let popup = document.querySelector(".popup")
-        console.log(bars)
-        bars.forEach(function(element){
-        element.addEventListener("click", function(){
-            popup.style.display = "block";
-            let popupInfo = document.getElementById("popup-info")
-            popupInfo.innerHTML = text
-            popupInfo.style.width = "fit-content"
-            popupInfo.style.height = "fit-content"
-            popupInfo.style.top = event.clientY + "px"
-            popupInfo.style.left = event.clientX + "px"
-            console.log(text)
-        })
-        element.addEventListener("mouseout", function(){
-            popup.style.display = "none";
-
-        })
-    })
+        
     }, 700)
     
 }
@@ -324,15 +328,6 @@ console.log(text)
 window.addEventListener("resize", function(){
     deleteChart();
     createChart(dropdown.value)
-    bars = document.querySelectorAll(".bar")
-    popup = document.querySelector(".popup")
-    console.log(bars)
-    bars.forEach(function(element){
-        element.addEventListener("mouseover", function(){
-            popup.style.display = "block";
-            document.getElementById("popup-info").innerText = text
-        })
-    })
 })
 
 dropdown.addEventListener("click", function(){  
