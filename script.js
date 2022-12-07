@@ -16,21 +16,21 @@ let text = '';
 let count3 = 0;
 /**
  * Creates a stacked bar chart, code for stacked bar chart, with edits from
- * (Holtz, 2022), see README for more details
+ * (Holtz, 2022), see README for more details.
  * @param {string} word - specifies what column of the dataset to select to make bar chart.
  */
 function createChart (word) {
     /**
      * Variables declared at the beginning of the function.
      * Colours is an array of the hex code of the colours for the bars.
-     * c contains the countries being surveyed
-     * r contains the responses to the question
-     * numR corresponds to the number of each response, 2d array
-     * newData contains the array of objects with keys being the responses and the country and the values the number of each response and the name of the country.
-     * cols is the number of columns in the 2d array
-     * chart is the div within which the chart is made
-     * margin defines the margins of the svg
-     * height and width are the height and width of the svg
+     * c contains the countries being surveyed,
+     * r contains the responses to the question,
+     * numR corresponds to the number of each response and is a 2d arraym
+     * newData is an array of objects with keys being the responses and the country and the values the number of each response and the name of the country.
+     * cols is the number of columns in the 2d array,
+     * chart is the div within which the chart is made,
+     * margin defines the margins of the svg,
+     * height and width are the height and width of the svg.
      * @name declaringVariables
      */
     const colours = ['#ADD8E6', '#0000FF', '#D3D3D3', '#808080', '#454545'];
@@ -73,7 +73,6 @@ function createChart (word) {
                 c.push(data[i].Country);
             }
         }
-        // only select first few countries as not enough data on other countries for good visualisation, and not enough space to include all countries.
         c = c.slice(0, 11);
         for (let i = 0; i < cols; i++) {
             for (let j = 0; j < c.length; j++) {
@@ -107,7 +106,7 @@ function createChart (word) {
         }
         let total = 0;
         /**
-         * For loop to convert number of each response to percentage of each response
+         * For loop to convert number of each response to percentage of each response.
          * @name toPercentage
          */
         for (let i = 0; i < c.length; i++) {
@@ -149,12 +148,10 @@ function createChart (word) {
         const stackedData = d3.stack().keys(subgroups)(newData);
         svg.append('g')
             .selectAll('g')
-            // Enter in the stack data = loop key per key = group per group
             .data(stackedData)
             .enter().append('g')
             .attr('fill', function (d) { return color(d.key); })
             .selectAll('rect')
-            // enter a second time = loop subgroup per subgroup to add all rectangles
             .data(function (d) { return d; })
             .enter().append('rect')
                 .attr('x', function (d) { return x(d.data.Country); })
@@ -167,7 +164,7 @@ function createChart (word) {
                       .style('opacity', '0.5')
                       /**
                        * Function to create text for each bar for popup.
-                       * @param {array} - updated dataset
+                       * @param {object} - updated dataset
                        * @name addText
                        */
                       .text(function (d) {
@@ -217,7 +214,7 @@ function createChart (word) {
         bars.forEach(
         /**
          * Adds event so that when the user clicks on a bar, the popup with that bar's information pops up, and pop up position depends on location of cursor.
-         * @param {object} element - bar that the popup is being added to
+         * @param {object} element - bar that the popup is being added to.
          * @name addPopup
          */
         function (element) {
@@ -238,7 +235,7 @@ function createChart (word) {
 }
 /**
  * Function deleteChart
- * Deletes chart, used when user wants to change chart. * 
+ * Deletes chart, used when user wants to change chart. 
  */
 function deleteChart () {
     d3.select('svg').remove();
@@ -255,15 +252,20 @@ const darkMode = document.getElementById('dark-mode-button');
 const home = document.getElementById('home');
 const btns = document.querySelectorAll('.b1');
 const dropdown = document.getElementById('criteria');
-let count = 1;
-let count2 = 1;
-let prevValue = dropdown.value;
 const rightDropdown = document.querySelector('.right-dropdown');
 const rightModal = document.querySelector('.right-modal');
 const references = document.querySelectorAll('.reference');
+const email = document.getElementById('exampleInputEmail1');
+let count = 1;
+let count2 = 1;
+let prevValue = dropdown.value;
 /**
- * Function so that any element with class fade left or fade right is monitored
- * @param {object} - element with class fadeleft/faderight
+ * Regular expression which makes sure that email box has at least one character, then @ followed by at least 1 character.
+ */
+const regex = /.+@.+/;
+/**
+ * Function so that any element with class fade left or fade right is monitored.
+ * @param {object} - element with class fadeleft/faderight.
  * @name addFade
  */
 fadeLeft.forEach((element) => observer.observe(element));
@@ -282,11 +284,11 @@ window.onload = function () {
 
 class Buttons {
     /**
-     * Initialises class of buttons
-     * @param {object} button - The DOM representation of the button
-     * @param {string} color - Colour of button
-     * @param {string} borderStyle - Border style of button
-     * @param {string} backgroundColor - Background colour of button
+     * Initialises class of buttons.
+     * @param {object} button - The DOM representation of the button.
+     * @param {string} color - Colour of button.
+     * @param {string} borderStyle - Border style of button.
+     * @param {string} backgroundColor - Background colour of button.
      * @constructor
      */
     constructor (button, color, borderStyle, backgroundColor) {
@@ -297,10 +299,10 @@ class Buttons {
     }
 
     /**
-     * Instance method to change colour of button
-     * @param {string} newColor - specifies new colour of button
-     * @param {string} newBorderStyle - specifies new border style of button
-     * @param {string} newBackgroundColor - specifies new background colour of button
+     * Instance method to change colour of button.
+     * @param {string} newColor - specifies new colour of button.
+     * @param {string} newBorderStyle - specifies new border style of button.
+     * @param {string} newBackgroundColor - specifies new background colour of button.
      */
     colorSwitch (newColor, newBorderStyle, newBackgroundColor) {
         this.button.style.color = newColor;
@@ -310,7 +312,7 @@ class Buttons {
 }
 const buttonList = [];
 /**
- * For loop used to add buttons to class and to array button list
+ * For loop used to add buttons to class and to array button list.
  * @name addToButtons
  */
 for (let i = 0; i < btns.length; i++) {
@@ -320,8 +322,8 @@ for (let i = 0; i < btns.length; i++) {
     buttonList[i].button.addEventListener('mouseover', function () { btnHover2(element); });
 }
 /**
- * Changes colour of button when the user hovers over it, and changes the colour back once the user stops hovering over it
- * @param {object} button - The button the user is hovering over
+ * Changes colour of button when the user hovers over it, and changes the colour back once the user stops hovering over it.
+ * @param {object} button - The button the user is hovering over.
  */
 function btnHover1 (button) {
     if (count % 2 === 1) {
@@ -347,7 +349,15 @@ home.style.color = 'black';
 document.body.style.backgroundColor = '#FFFDD1';
 document.body.style.color = '#434343';
 darkMode.addEventListener('click', switchColours);
-submitButton.addEventListener('click', function () { alert('Email submitted'); });
+submitButton.addEventListener('click', function () {
+    if (regex.test(email.value)) {
+        alert('Email submitted');
+        email.value = '';
+        document.getElementById('exampleInputPassword1').value = '';
+    } else if (email.value === '') {
+        alert('please enter your email');
+    }
+});
 /**
  * Adds an event listener so that when the object is clicked, the references show on the right side of the screen
  * @param {object} element - the specific reference in the list
@@ -367,10 +377,10 @@ window.addEventListener('resize', function () {
     createChart(dropdown.value);
 });
 /**
- * Adds functionality to dropdown
- * If the value of dropdown changes (i.e. new one selected), creates a new chart with the value currently in the dropdown
- * Also first changes opacity of bars to 0 for smoother animation
- * Upadates previous dropdown value for next time user changes the value of dropdown
+ * Adds functionality to dropdown.
+ * If the value of dropdown changes (i.e. new one selected), creates a new chart with the value currently in the dropdown.
+ * Also first changes opacity of bars to 0 for smoother animation.
+ * Upadates previous dropdown value for next time user changes the value of dropdown.
  * @name dropdownFunction
  */
 dropdown.addEventListener('click', function () {

@@ -5,8 +5,7 @@ module.exports = {
         "indent": "off"
     },
     "plugins": [
-        "d3",
-        "compat"
+        "d3"
     ],
     "globals":{
         "d3": "true",

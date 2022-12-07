@@ -1,5 +1,7 @@
 Programming Gold Term 1 Website for term1 summative and formative
 
+For the eslint file, I added plugins and globals so that eslint recognises d3, IntersectionObserver and alert.
+
 References are contained below and also in the webpage, can be accessed by clicking references in navbar.
 
 
