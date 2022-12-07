@@ -31,6 +31,7 @@ function createChart (word) {
      * chart is the div within which the chart is made
      * margin defines the margins of the svg
      * height and width are the height and width of the svg
+     * @name declaringVariables
      */
     const colours = ['#ADD8E6', '#0000FF', '#D3D3D3', '#808080', '#454545'];
     let c = [];
@@ -43,7 +44,9 @@ function createChart (word) {
     const width = chart.offsetWidth / 1.3;
     const height = chart.offsetWidth / 2;
     /**
-     * Creates svg within div named myChart of the height previously specified.
+     * Creates svg within div named myChart of the height and width previously specified.
+     * @constant
+     * @name svg
      */
     const svg = d3.select('#myChart')
         .attr('viewBox', '0 0 ' + width + ' ' + height)
@@ -57,6 +60,7 @@ function createChart (word) {
     * Goes through dataset (survey) and makes a new dataset where each country appears once,
     * Has percentages of each response for the chosen column, then makes stacked bar chart from that new dataset.
     * @param {object} data - the dataset.
+    * @name processData
     */
     d3.csv('/Dataset/survey.csv').then(function (data) {
         for (let i = 0; i < 1259; i++) {
@@ -89,8 +93,8 @@ function createChart (word) {
         }
         const a = [...c];
         /**
-         * @name shortenCountryNames
          * For loop to shorten country names to fit nicely in bar chart.
+         * @name shortenCountryNames
          */
         for (let i = 0; i < c.length; i++) {
             if (c[i] === 'United States') {
@@ -104,6 +108,7 @@ function createChart (word) {
         let total = 0;
         /**
          * For loop to convert number of each response to percentage of each response
+         * @name toPercentage
          */
         for (let i = 0; i < c.length; i++) {
             for (let j = 0; j < cols; j++) {
@@ -163,6 +168,7 @@ function createChart (word) {
                       /**
                        * Function to create text for each bar for popup.
                        * @param {array} - updated dataset
+                       * @name addText
                        */
                       .text(function (d) {
                         for (let i = 0; i < a.length; i++) {
@@ -187,11 +193,11 @@ function createChart (word) {
             });
 
     /**
-     * @name timeoutFunction
      * After 200ms, function called to change opacity of bars (for animation) and makes bars more interactive.
      * This is applied after a 200ms timer to ensure everything else has been loaded first.
      * Count3 used to determine if popup present or not.
      * Adds event so that when the user clicks anywhere when the popup if up, the popup if removed.
+     * @name timeOutFunction
      */
     setTimeout(
         function () {
@@ -212,6 +218,7 @@ function createChart (word) {
         /**
          * Adds event so that when the user clicks on a bar, the popup with that bar's information pops up, and pop up position depends on location of cursor.
          * @param {object} element - bar that the popup is being added to
+         * @name addPopup
          */
         function (element) {
         element.addEventListener('click', function (event) {
@@ -231,7 +238,7 @@ function createChart (word) {
 }
 /**
  * Function deleteChart
- * Deletes chart, used when user wants to change chart.
+ * Deletes chart, used when user wants to change chart. * 
  */
 function deleteChart () {
     d3.select('svg').remove();
@@ -257,6 +264,7 @@ const references = document.querySelectorAll('.reference');
 /**
  * Function so that any element with class fade left or fade right is monitored
  * @param {object} - element with class fadeleft/faderight
+ * @name addFade
  */
 fadeLeft.forEach((element) => observer.observe(element));
 fadeRight.forEach((element) => observer.observe(element));
@@ -303,6 +311,7 @@ class Buttons {
 const buttonList = [];
 /**
  * For loop used to add buttons to class and to array button list
+ * @name addToButtons
  */
 for (let i = 0; i < btns.length; i++) {
     buttonList.push(new Buttons(btns[i], 'black', '1px solid black', 'aquamarine'));
@@ -342,6 +351,7 @@ submitButton.addEventListener('click', function () { alert('Email submitted'); }
 /**
  * Adds an event listener so that when the object is clicked, the references show on the right side of the screen
  * @param {object} element - the specific reference in the list
+ * @name addReference
  */
 references.forEach(function (element) {
     element.addEventListener('click', shiftModal);
@@ -350,6 +360,7 @@ createChart('family_history');
 /**
  * Makes svg responsive
  * When size of window changes, deletes the chart and makes a new one with the right size.
+ * @name responsiveSVG
  */
 window.addEventListener('resize', function () {
     deleteChart();
@@ -360,6 +371,7 @@ window.addEventListener('resize', function () {
  * If the value of dropdown changes (i.e. new one selected), creates a new chart with the value currently in the dropdown
  * Also first changes opacity of bars to 0 for smoother animation
  * Upadates previous dropdown value for next time user changes the value of dropdown
+ * @name dropdownFunction
  */
 dropdown.addEventListener('click', function () {
     if (dropdown.value !== prevValue) {
