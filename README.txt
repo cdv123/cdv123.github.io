@@ -8,7 +8,7 @@ References are contained below and also in the webpage, can be accessed by click
 Images:
 HelpGuide (2022) Building Better Mental Health HelpGuide.org. Available at: https://www.helpguide.org/articles/mental-health/building-better-mental-health.htm  (Accessed: October 28, 2022). 
 Sarin, A. (2022) Top 5 mental health tech and innovations in 2022, Copper Mobile. Available at: https://coppermobile.com/blog/top-5-mental-health-tech-and-innovations-in-2022/  (Accessed: December 6, 2022). 
- Zahair, A. (2022) 16 Million reasons why health tech is a win for Mental Health, GHP News. GHP News. Available at: https://www.ghp-news.com/16-million-reasons-why-health-tech-is-a-win-for-mental-health/(Accessed: December 6, 2022). 
+ Zahair, A. (2022) 16 Million reasons why health tech is a win for Mental Health, GHP News. GHP News. Available at: https://www.ghp-news.com/16-million-reasons-why-health-tech-is-a-win-for-mental-health/ (Accessed: December 6, 2022). 
 
 Code:
 Bootstrap (2022) · Bootstrap. Available at: https://getbootstrap.com/docs/4.0/components/navbar/ (Accessed: October 29, 2022).
